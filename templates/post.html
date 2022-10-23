@@ -9,11 +9,11 @@
             <h1>Home</h1>
         </section>
     <section class="post_form"> Home
-        <form action="/" method="POST">
+        <form method="POST" enctype="multipart/form-data">
             {% csrf_token %}
             <input class="yourname" type="text" name="name" placeholder="Your Name" required/>
             <textarea name="body" placeholder="What Happening?" required></textarea>
-            <input class="form-control" type="file"  required/>
+            <input class="form-control" type="file" name="img" required/>
             <input  class="tweet-button" type="submit" value="Tweet"/>
         </form>
     </section>
@@ -24,16 +24,26 @@
                 <img class="menu_icon js-menu-icon" src="{% static 'img/menu.png' %}"/> 
                 <div class ="menu">
                     <a href="/delete/{{post.id}}/"> Delete</a>
+                    <br>
+                    <a href="/edit/{{post.id}}/"> Edit</a>
 
                 </div>
                 <div class ="logo">
-                <img src="{% static 'img/user.png' %}">
+                <img src="{% static 'img/user1.png' %}">
                 </div>
                 <div class="name_body">
                  <div class="name">{{post.name}}</div> 
                  <div class="datetime">{{post.created_at}}</div>
                  <p>{{post.body}}</p>
-                <a href="/delete{{post.id}}/">delete</a>
+                 {%if post.img%}
+                 <img class="post-img" src="{{post.img.url}}" alt="">
+                 {%endif%}
+                 <div class="like">
+                <a href="/like/{{post.id}}/">
+                    <img style='width: 30px;' src="{% static 'img/love.png' %}" alt="">
+                </a>
+                <p>{{post.like}}</p>
+            </div>
                 </div>
             </li>
             {%endfor%}

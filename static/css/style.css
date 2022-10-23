@@ -143,6 +143,17 @@ h1{
 .posts li .name_body .datetime{
     color: gray;
 }
+.like{
+    display: flex;
+    align-items: center;
+}
+.like img{
+    margin-right: 10px;
+}
+.post-img{
+    width: 80%;
+    border-radius: 10px;
+}
 
 @media screen and (max-width:500px) 
 {

@@ -1,4 +1,7 @@
+from email.policy import default
 from django.db import models
+
+from cloudinary.models import CloudinaryField
 
 class Post(models.Model):
     class Meta(object):
@@ -11,6 +14,14 @@ class Post(models.Model):
     body= models.CharField(
         'Body', blank=True, null=True, max_length=140, db_index=True
     )
+
+    img= CloudinaryField(
+        'img', blank=True, 
+    )
+    like= models.IntegerField(
+        'like', blank=True, default=0
+    )
+
     created_at= models.DateTimeField(
         'Created DateTime', blank=True, auto_now_add=True
     
