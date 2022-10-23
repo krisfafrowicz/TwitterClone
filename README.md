@@ -6,8 +6,8 @@ So there are not user accounts and follow function. You can challenge after you 
 ```
 Check out [LIVE Twitter clone DEMO](https://twitterclone.krisfafrowicz.repl.co/) here!!
 
+<img width="482" alt="Screen Shot 2022-10-23 at 3 59 29 PM" src="https://user-images.githubusercontent.com/110893629/197422304-e7792bcd-0045-4439-bb42-56be130b4f95.png">
 
-<img width="482" alt="Screen Shot 2022-10-23 at 3 57 36 PM" src="https://user-images.githubusercontent.com/110893629/197422259-5e24e971-01f0-4e59-979a-de543860c30a.png">
 
 
 
