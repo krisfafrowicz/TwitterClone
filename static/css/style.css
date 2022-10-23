@@ -1,0 +1,152 @@
+/* Common **************/
+
+*{
+    box-sizing: border-box;
+}
+
+
+html,body{
+    height: 100%;
+}
+
+/*** header/home***/
+
+.content .home-header {
+   height: 30px;
+   position:relative;
+   padding-left: 20px;
+   
+
+
+
+}
+.logohead{
+    border: 1px solid aqua;
+}
+
+h1{
+    display: inline-block;
+    padding: 5px;
+   
+
+    
+
+
+}
+
+.content{
+    max-width: 600px;
+    height: 100%;
+    margin: 0 auto;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+}
+/* Post *********/
+.post_form{
+    padding: 20px 40px;
+    border-bottom: 1px solid black;
+}
+.post_form input{
+    width: 70%;
+    margin-bottom: 10px;
+    padding: 10px;
+    
+}
+
+.form-control{
+    border: .5px solid #ccc;
+    
+
+
+}
+
+.post_form .yourname{
+    background-color: #e6fef7;
+    writing-mode: horizontal-tb !important;
+    text-rendering: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: none;
+
+}
+
+.post_form textarea{
+    width: 70%;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.post_form .tweet-button{
+    background-color: #1DA1f2;
+    color: white;
+    border-radius: .25rem;
+    display: inline;
+    width: 15%;
+    justify-content: center;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+    padding: .375rem .75rem;
+}
+
+.posts li .menu_icon{
+    width: 20px;
+    position:absolute;
+    top: 10px;
+    right: 10px;
+
+}
+
+
+
+.posts li{
+    position: relative;
+    display:flex;
+    border-bottom: 1px solid #ccc;
+    padding: 15px;
+    list-style: none;
+    position: relative;
+
+
+}
+
+.posts li .menu {
+    display: none;
+    position: absolute;
+    top: 40px;
+    right: 15px;
+    border: 1px solid lightblue;
+    background-color: whitesmoke;
+    padding: 10px 15px;
+    border-radius: 3px;
+    font-size: 10px;
+}
+
+
+.posts ul{
+    padding: 0;
+}
+.posts li .logo {
+    flex-basis: 15%;
+}
+.posts li .logo img {
+    width: 60%;
+}
+.posts li .name_body{
+    flex-basis: 85%;
+}
+.posts li .name_body .name{
+    font-weight: bold;
+}
+
+.posts li .name_body .datetime{
+    color: gray;
+}
+
+@media screen and (max-width:500px) 
+{
+.posts li .name_body .name{
+    font-size: 20px;
+}    
+}

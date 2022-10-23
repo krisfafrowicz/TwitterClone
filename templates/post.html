@@ -1,0 +1,50 @@
+{% extends "base.html"%} {% block content %}
+{% load static %}
+
+
+
+<section class="content">
+    <section class="logohead">
+        <img class="home-header" src="static/img/twitter.png">
+            <h1>Home</h1>
+        </section>
+    <section class="post_form"> Home
+        <form action="/" method="POST">
+            {% csrf_token %}
+            <input class="yourname" type="text" name="name" placeholder="Your Name" required/>
+            <textarea name="body" placeholder="What Happening?" required></textarea>
+            <input class="form-control" type="file"  required/>
+            <input  class="tweet-button" type="submit" value="Tweet"/>
+        </form>
+    </section>
+    <section class="posts">
+        <ul>
+            {% for post in posts %}
+            <li>
+                <img class="menu_icon js-menu-icon" src="{% static 'img/menu.png' %}"/> 
+                <div class ="menu">
+                    <a href="/delete/{{post.id}}/"> Delete</a>
+
+                </div>
+                <div class ="logo">
+                <img src="{% static 'img/user.png' %}">
+                </div>
+                <div class="name_body">
+                 <div class="name">{{post.name}}</div> 
+                 <div class="datetime">{{post.created_at}}</div>
+                 <p>{{post.body}}</p>
+                <a href="/delete{{post.id}}/">delete</a>
+                </div>
+            </li>
+            {%endfor%}
+        </ul>
+    
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+     <script src="{% static 'js/script.js'%}"></script>
+    
+    </section>
+</section>
+
+
+{% endblock %}
+
